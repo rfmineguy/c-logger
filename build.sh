@@ -14,4 +14,4 @@ cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 echo "Cmake building files"
 cmake --build .
 #clear
-./bin/c_logger
+./bin/c_logger_exec
