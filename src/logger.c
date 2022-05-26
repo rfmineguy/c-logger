@@ -18,7 +18,7 @@ void logger_log_v(int level, const char* fmt, va_list args) {
     }
     vsprintf(buffer, fmt, args);
     strcat(prefix, buffer);
-    printf("%s\n", prefix);
+    printf("%s\n\e[0m", prefix);
 }
 
 void logger_log(int level, const char* fmt, ...) {
@@ -72,7 +72,7 @@ void logger_flog_v(FILE* filePtr, int level, const char* fmt, va_list args) {
     }
     vsprintf(buffer, fmt, args);
     strcat(prefix, buffer);
-    fprintf(filePtr, "%s\n", prefix);
+    fprintf(filePtr, "%s\n\e[0m", prefix);
 }
 
 void logger_flog(FILE* filePtr, int level, const char* fmt, ...) {

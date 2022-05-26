@@ -21,6 +21,7 @@ int main() {
     logger_fcritical(file, "Failed to write to disk");
     logger_fwarn(file, "Warn test");
     logger_debug("Hello World %s", "test");
+    printf("Test\n");
 
     if (file != NULL)
         fclose(file);
